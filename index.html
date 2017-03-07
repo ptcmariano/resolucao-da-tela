@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Resolução da tela</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Resolução da tela</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
 <header>
-	<h1>Qual a resolução da tela do meu celular?</h1>
+    <h1>Qual a resolução da tela do meu celular?</h1>
 </header>
 <section>
-	<h2 id="resolucao"></h2>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <div id="app">
+      <p>largura: {{ largura }}</p>
+      <p>altura: {{ altura }}</p>
+    </div>
+
 </section>
 <script type="text/javascript">
-	var largura = window.screen.width,
-		altura = window.screen.height;
-	document.getElementById('resolucao').textContent = "largura: " + largura + " x altura: " + altura;
+    new Vue({
+      el: '#app',
+      data: {
+        largura: window.screen.width,
+        altura: window.screen.height
+      }
+    })
 </script>
 </body>
 </html>
