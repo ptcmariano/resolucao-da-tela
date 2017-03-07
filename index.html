@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resolução da tela</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+<header>
+	<h1>Qual a resolução da tela do meu celular?</h1>
+</header>
+<section>
+	<h2 id="resolucao"></h2>
+</section>
+<script type="text/javascript">
+	var largura = window.screen.width,
+		altura = window.screen.height;
+	document.getElementById('resolucao').textContent = "largura: " + largura + " x altura: " + altura;
+</script>
+</body>
+</html>
